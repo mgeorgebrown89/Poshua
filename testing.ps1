@@ -4,3 +4,9 @@ $p = @"
 $Body = @{
     payload = $p
 }
+
+#Invoke-RestMethod -Uri "http://localhost:1000/api/slack" -Method Post -Body $Body
+
+$LogsPath = (Split-Path -Parent (($PSScriptRoot)))| Join-Path -ChildPath "Logs"
+$LogsPath
+Out-File -FilePath "$LogsPath\test.json" -InputObject $P
