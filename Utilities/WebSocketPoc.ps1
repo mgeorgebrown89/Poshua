@@ -27,7 +27,7 @@ Function Send-SlackMsg {
     Return $ID
 }
 
-$token = 'xoxb-643543980115-726920902163-sKXCYHCuhEuN12kBChUmN6tf'
+$token = 
 $RTMSession = Invoke-RestMethod -Uri https://slack.com/api/rtm.start -Body @{token = "$Token" }
 Write-Verbose "I am $($RTMSession.self.name)"  
 

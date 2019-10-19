@@ -5,4 +5,5 @@ foreach($e in (Get-ChildItem -Path $EndpointsPath -Recurse -File -Filter "*.ps1"
 }
 
 Start-UDRestApi -Port 80 -Endpoint $Endpoints #-AutoReload
+
 #Get-UDRestApi | Stop-UDRestApi
